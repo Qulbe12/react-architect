@@ -1,0 +1,52 @@
+{
+  "name": "react-architect",
+  "version": "1.0.0",
+  "description": "A CLI scaffolding tool for generating opinionated folder structures and React components for Vite + React + TypeScript applications",
+  "main": "lib/index.js",
+  "bin": {
+    "react-architect": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "link": "npm link",
+    "unlink": "npm unlink -g react-architect",
+    "prepublishOnly": "echo '📦 Preparing to publish...'",
+    "postpublish": "echo '✅ Published successfully!'"
+  },
+  "keywords": [
+    "react",
+    "cli",
+    "scaffold",
+    "generator",
+    "vite",
+    "typescript",
+    "architecture",
+    "boilerplate",
+    "component-generator"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/react-architect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/react-architect/issues"
+  },
+  "homepage": "https://github.com/yourusername/react-architect#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "handlebars": "^4.7.8"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ]
+}

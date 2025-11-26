@@ -1,0 +1,56 @@
+/**
+ * {{name}}Service
+ * 
+ * A singleton service for managing {{name}} related operations
+ */
+class {{name}}Service {
+  private static instance: {{name}}Service;
+  
+  private constructor() {
+    // Private constructor to prevent direct instantiation
+    this.initialize();
+  }
+
+  /**
+   * Get the singleton instance
+   */
+  public static getInstance(): {{name}}Service {
+    if (!{{name}}Service.instance) {
+      {{name}}Service.instance = new {{name}}Service();
+    }
+    return {{name}}Service.instance;
+  }
+
+  /**
+   * Initialize the service
+   */
+  private initialize(): void {
+    // Add initialization logic here
+    console.log('{{name}}Service initialized');
+  }
+
+  /**
+   * Example method - replace with your own logic
+   */
+  public async fetchData(): Promise<any> {
+    try {
+      // Add your service logic here
+      return { success: true, data: [] };
+    } catch (error) {
+      console.error('Error in {{name}}Service:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Example method - replace with your own logic
+   */
+  public processData(data: any): any {
+    // Add your processing logic here
+    return data;
+  }
+}
+
+// Export singleton instance
+export const {{camelName}}Service = {{name}}Service.getInstance();
+export default {{name}}Service;

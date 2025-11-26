@@ -1,0 +1,15 @@
+import React from 'react';
+import styles from './{{name}}.module.scss';
+import { {{name}}Props } from './{{name}}.types';
+
+/**
+ * {{name}} Component
+ */
+export const {{name}}: React.FC<{{name}}Props> = ({ children, className = '' }) => {
+  return (
+    <div className={`${styles.{{kebabName}}} ${className}`}>
+      <h2>{{name}} Component</h2>
+      {children}
+    </div>
+  );
+};

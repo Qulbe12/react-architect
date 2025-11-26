@@ -1,0 +1,56 @@
+import { useState, useEffect } from 'react';
+
+/**
+ * {{hookName}} - Custom React Hook
+ * 
+ * @returns Hook state and methods
+ */
+export const {{hookName}} = () => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    // Add your effect logic here
+    console.log('{{hookName}} mounted');
+
+    return () => {
+      // Cleanup logic
+      console.log('{{hookName}} unmounted');
+    };
+  }, []);
+
+  /**
+   * Example method - replace with your own logic
+   */
+  const fetchData = async () => {
+    setLoading(true);
+    setError(null);
+    
+    try {
+      // Add your data fetching logic here
+      const result = await Promise.resolve({ message: 'Data fetched successfully' });
+      setData(result);
+    } catch (err) {
+      setError(err as Error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  /**
+   * Example method - replace with your own logic
+   */
+  const resetData = () => {
+    setData(null);
+    setError(null);
+  };
+
+  return {
+    data,
+    loading,
+    error,
+    fetchData,
+    resetData
+  };
+};
