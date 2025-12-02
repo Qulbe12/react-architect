@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2025-12-02
+
+### Added
+- New `module` command with `m` alias for cleaner syntax when generating items in modules
+  - Usage: `react-architect module <moduleName> <type> <name>`
+  - Example: `react-architect m auth component LoginForm`
+- New `list-modules` command with `ls` alias to show all available modules
+  - Usage: `react-architect ls`
+- Helper function `getAvailableModules()` to list modules programmatically
+
+### Improved
+- Better command organization and help text
+- More intuitive workflow for module-based development
+
+### Examples
+```bash
+# Create module and add items with new syntax
+react-architect g module auth
+react-architect m auth component LoginForm
+react-architect m auth service Auth
+react-architect ls  # View all modules
+```
+
 ## [1.0.0] - 2025-11-26
 
 ### Added

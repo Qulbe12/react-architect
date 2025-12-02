@@ -82,6 +82,18 @@ react-architect g service Auth --module auth
 react-architect g hook useAuth --module auth
 ```
 
+**Or use the cleaner module command:**
+
+```bash
+# Create module
+react-architect g module auth
+
+# Add items with cleaner syntax
+react-architect m auth component LoginForm
+react-architect m auth service Auth
+react-architect m auth hook useAuth
+```
+
 ## Step 7: Run Your App
 
 ```bash
@@ -99,15 +111,25 @@ react-architect g component MyComponent
 
 # Generate component in module
 react-architect g component MyComponent --module auth
+react-architect m auth component MyComponent  # NEW cleaner syntax!
 
 # Generate service
 react-architect g service MyService
 
+# Generate service in module
+react-architect m auth service Auth
+
 # Generate hook
 react-architect g hook useMyHook
 
+# Generate hook in module
+react-architect m auth hook useAuth
+
 # Generate module
 react-architect g module myModule
+
+# List all modules
+react-architect ls
 
 # Show help
 react-architect --help

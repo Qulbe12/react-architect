@@ -126,7 +126,62 @@ react-architect generate <type> <name> [options]
 - `hook` - Custom React hook
 
 **Options:**
-- `-m, --module <moduleName>` - Generate inside a specific module
+- `-m, --module <name>` - Generate inside a specific module
+
+**Examples:**
+```bash
+# Generate a component
+react-architect g component Button
+
+# Generate a component in a module
+react-architect g component LoginForm --module auth
+react-architect g component LoginForm -m auth  # shorthand
+```
+
+### `module` (alias: `m`) - NEW! 🎉
+
+Cleaner syntax for generating items inside a specific module.
+
+```bash
+react-architect module <moduleName> <type> <name>
+```
+
+**Types:**
+- `component` - React component
+- `service` - Service class
+- `hook` - Custom hook
+
+**Examples:**
+```bash
+# Generate components in auth module
+react-architect module auth component LoginForm
+react-architect m auth component RegisterForm  # shorthand
+
+# Generate service in auth module
+react-architect m auth service Auth
+
+# Generate hook in auth module
+react-architect m auth hook useAuth
+```
+
+### `list-modules` (alias: `ls`) - NEW! 🎉
+
+List all available modules in your project.
+
+```bash
+react-architect list-modules
+react-architect ls  # shorthand
+```
+
+**Output:**
+```
+📦 Available modules:
+  • auth
+  • products
+  • dashboard
+
+Total: 3 module(s)
+```
 
 ---
 
@@ -224,7 +279,12 @@ src/modules/auth/
 ### Generate Component Inside Module
 
 ```bash
+# Traditional way with --module flag
 react-architect g component LoginForm --module auth
+
+# Or use the cleaner module command (NEW!)
+react-architect module auth component LoginForm
+react-architect m auth component LoginForm  # shorthand
 ```
 
 ---
