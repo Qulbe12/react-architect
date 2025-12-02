@@ -24,16 +24,16 @@
     "boilerplate",
     "component-generator"
   ],
-  "author": "Your Name",
+  "author": "Hussain Qulbe",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/react-architect.git"
+    "url": "https://github.com/Qulbe12/react-architect.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/react-architect/issues"
+    "url": "https://github.com/Qulbe12/react-architect/issues"
   },
-  "homepage": "https://github.com/yourusername/react-architect#readme",
+  "homepage": "https://github.com/Qulbe12/react-architect#readme",
   "engines": {
     "node": ">=14.0.0"
   },
