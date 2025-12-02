@@ -1,6 +1,6 @@
 {
   "name": "react-architect",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A CLI scaffolding tool for generating opinionated folder structures and React components for Vite + React + TypeScript applications",
   "main": "lib/index.js",
   "bin": {
